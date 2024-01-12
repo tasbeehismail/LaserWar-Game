@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		35D1DD1B2B510EDF00173E7D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35D1DD1A2B510EDF00173E7D /* main.cpp */; };
+		35D1DD232B510FAD00173E7D /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35D1DD222B510FAD00173E7D /* OpenGL.framework */; };
+		35D1DD252B510FC600173E7D /* libglfw.3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 35D1DD242B510FC600173E7D /* libglfw.3.3.dylib */; };
+		35D1DD272B51106100173E7D /* libglut.3.12.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 35D1DD262B51106100173E7D /* libglut.3.12.0.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,9 @@
 /* Begin PBXFileReference section */
 		35D1DD172B510EDF00173E7D /* Game */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Game; sourceTree = BUILT_PRODUCTS_DIR; };
 		35D1DD1A2B510EDF00173E7D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		35D1DD222B510FAD00173E7D /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		35D1DD242B510FC600173E7D /* libglfw.3.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.3.dylib; path = ../../../../opt/homebrew/Cellar/glfw/3.3.9/lib/libglfw.3.3.dylib; sourceTree = "<group>"; };
+		35D1DD262B51106100173E7D /* libglut.3.12.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglut.3.12.0.dylib; path = ../../../../opt/homebrew/Cellar/freeglut/3.4.0/lib/libglut.3.12.0.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +38,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35D1DD272B51106100173E7D /* libglut.3.12.0.dylib in Frameworks */,
+				35D1DD252B510FC600173E7D /* libglfw.3.3.dylib in Frameworks */,
+				35D1DD232B510FAD00173E7D /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +52,7 @@
 			children = (
 				35D1DD192B510EDF00173E7D /* Game */,
 				35D1DD182B510EDF00173E7D /* Products */,
+				35D1DD212B510FAD00173E7D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +70,16 @@
 				35D1DD1A2B510EDF00173E7D /* main.cpp */,
 			);
 			path = Game;
+			sourceTree = "<group>";
+		};
+		35D1DD212B510FAD00173E7D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				35D1DD262B51106100173E7D /* libglut.3.12.0.dylib */,
+				35D1DD242B510FC600173E7D /* libglfw.3.3.dylib */,
+				35D1DD222B510FAD00173E7D /* OpenGL.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,7 +264,15 @@
 		35D1DD1F2B510EDF00173E7D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = /opt/homebrew/Cellar/glfw/3.3.9/include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/homebrew/Cellar/glfw/3.3.9/lib,
+					/opt/homebrew/Cellar/freeglut/3.4.0/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -252,7 +280,15 @@
 		35D1DD202B510EDF00173E7D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = /opt/homebrew/Cellar/glfw/3.3.9/include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/homebrew/Cellar/glfw/3.3.9/lib,
+					/opt/homebrew/Cellar/freeglut/3.4.0/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
