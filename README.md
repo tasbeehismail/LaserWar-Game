@@ -23,5 +23,5 @@ The final Computer Graphics course project.
 
 
 ## Demo 
-![](https://github.com/tasbeehismail/LaserWar-Game/blob/main/DemoLaserWarGame.gif)
+![x](https://github.com/tasbeehismail/LaserWar-Game/blob/main/DemoLaserWarGame.gif)
 
