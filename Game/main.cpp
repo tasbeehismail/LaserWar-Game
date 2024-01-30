@@ -44,13 +44,13 @@ void init(){
     glColor3f(1.0,0.0,0.0);
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-    gluOrtho2D(-1200,1200,-700,700); //<-----CHANGE THIS TO GET EXTRA SPACE
+    gluOrtho2D(-1200,1200,-700,700); //<---CHANGE THIS TO GET EXTRA SPACE
     glMatrixMode(GL_MODELVIEW);
 }
 
 void introScreen()
 {
-    glClear(GL_COLOR_BUFFER_BIT); //
+    glClear(GL_COLOR_BUFFER_BIT); 
 
         glColor3f(0.0, 0.5, 1.0); // GL_Points
     displayRasterText(-150, 550, 0.0,"\"Laser War Game\"");
